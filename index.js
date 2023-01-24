@@ -33,10 +33,14 @@ const questions = () => {
 ]);
 }
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+fs.writeFile(`./dist/${fileName}`,data)
 
+}
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+    return inquiry.prompt(questions)
+}
 
 // Function call to initialize app
 init();
